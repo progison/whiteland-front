@@ -1,0 +1,51 @@
+<div id="text"></div>
+
+<script
+  src="https://vk.com/js/api/openapi.js?169"
+  type="text/javascript"
+></script>
+
+<script>
+  VK.init({
+    apiId: 8030024,
+    onlyWidgets: true,
+  });
+
+  VK.Observer.subscribe("auth.login", function (data) {
+    document.querySelector("#text").innerHTML = JSON.stringify(data, null, "  ")
+      .replace(/ /g, "&nbsp;")
+      .replace(/\n/g, "<br>");
+    console.log(data);
+  });
+
+  function auth() {
+    VK.Auth.login(function (data) {
+      document.querySelector("#text").innerHTML = JSON.stringify(
+        data,
+        null,
+        "  "
+      )
+        .replace(/ /g, "&nbsp;")
+        .replace(/\n/g, "<br>");
+      console.log(data);
+    });
+  }
+</script>
+<div id="vk_auth"></div>
+<script type="text/javascript">
+  VK.Widgets.Auth("vk_auth", {
+    onAuth: (data) => {
+      document.querySelector("#text").innerHTML = JSON.stringify(
+        data,
+        null,
+        "  "
+      )
+        .replace(/ /g, "&nbsp;")
+        .replace(/\n/g, "<br>");
+      console.log(data);
+    },
+  });
+</script>
+
+<br />
+<button onclick="auth()">Auth</button>

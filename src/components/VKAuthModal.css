@@ -1,0 +1,6 @@
+.modal-content.auth-modal {
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  width: fit-content;
+}

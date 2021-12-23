@@ -1,0 +1,132 @@
+.navbar {
+  /* position: fixed; */
+  background: linear-gradient(to top, #003, #303);
+  /* background-image: radial-gradient(circle at 50% 10%, #303, #003); */
+  /* backdrop-filter: blur(10px); */
+  /* width: 100%; */
+  box-shadow: #000 0 0 10px;
+  padding-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 576px) {
+  .navbar {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0.75rem 0;
+  }
+}
+
+.navbar-container {
+  flex-direction: column;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  color: #00f;
+  font-family: "Sigmar One", cursive;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    padding: 0;
+  }
+}
+
+.navbar-collapse {
+  flex-grow: initial;
+  order: 1;
+}
+
+@media (min-width: 576px) {
+  .navbar-collapse {
+    padding: 0.5rem 0;
+  }
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.nav-link {
+  padding: 0.25rem 0;
+}
+
+@media (min-width: 576px) {
+  .nav-link {
+    padding: 0;
+  }
+}
+
+.navbar-text {
+  padding: 0.5rem 0;
+  order: 0;
+}
+
+@media (min-width: 576px) {
+  .navbar-text {
+    padding: 0;
+    order: 1;
+  }
+}
+
+/* @media (min-width: 992px) {
+  .navbar-text {
+    padding-left: 0.5rem;
+  }
+} */
+
+.navbar-dark .navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 50%;
+  /* background-color: rgba(50, 0, 50, 0.5); */
+  /* background-image: radial-gradient(rgba(50, 0, 50, 0.75), transparent); */
+  padding: 0.2rem;
+  position: absolute;
+  /* right: -0.7rem; */
+  bottom: -0.7rem;
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+
+.navbar-dark .navbar-toggler.collapsed {
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  border: none;
+  outline: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.2), transparent);
+  box-shadow: none;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("../res/images/toggler.png");
+}
+
+.offcanvas {
+  background-color: transparent;
+  color: #fff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
