@@ -13,6 +13,8 @@ import VKUser from "./vk/VKUser";
 export default function App() {
   const [pageName, setPageName] = useState("");
   const [user, setUser] = useState<VKUser | undefined>();
+  const [abortController] = useState(new AbortController());
+
   // const [VKAuthModalShow, setVKAuthModalShow] = useState(false);
   // const VKAuthModalHandleShow = () => setVKAuthModalShow(true);
   // const VKAuthModalHandleClose = () => setVKAuthModalShow(false);
@@ -88,7 +90,12 @@ export default function App() {
           ></Route>
           <Route
             path="*"
-            element={<MainPage changePageName={changePageName}></MainPage>}
+            element={
+              <MainPage
+                changePageName={changePageName}
+                abortController={abortController}
+              ></MainPage>
+            }
           ></Route>
         </Routes>
       </Container>

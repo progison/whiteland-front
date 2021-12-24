@@ -1,7 +1,7 @@
 import React from "react";
-import { faVk } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
+// import { faVk } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import VKUser from "../vk/VKUser";
 import "./Header.css";
